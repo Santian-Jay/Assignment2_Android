@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">a1_android</string>
+    <string name="tab_text_1">All</string>
+    <string name="tab_text_2">Done</string>
+    <string name="tab_text_3">Undone</string>
+    <string name="tab_text_4">Deleted</string>
+    <string name="subtitle">Click the buttons in order.</string>
+    <string name="introduce">
+    </string>
+</resources>

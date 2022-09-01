@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ExerciseActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Mode"
+        android:layout_gravity="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Choose your exercise mode"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <RadioGroup
+        android:id="@+id/modeChoose"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        >
+        <RadioButton
+            android:id="@+id/freeMode"
+            android:layout_width="160dp"
+            android:layout_height="36dp"
+            android:textSize="20sp"
+            android:text="Free Mode"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/targetMode"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:textSize="20sp"
+            android:layout_marginStart="40dp"
+            android:text="Target Mode" />
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:id="@+id/linear_goal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+    <TextView
+        android:id="@+id/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Set goal"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        />
+
+    <RadioGroup
+        android:id="@+id/goals"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        >
+        <RadioButton
+            android:id="@+id/timeGoal"
+            android:layout_width="160dp"
+            android:layout_height="36dp"
+            android:textSize="20sp"
+            android:text="Time"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/repeatGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:textSize="20sp"
+            android:layout_marginStart="40dp"
+            android:text="Repeat" />
+    </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/goalSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:min="60"
+                android:max="300"
+                android:progress="60"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Play"/>
+            <TextView
+                android:id="@+id/setTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="60"
+                android:textColor="@color/orange"
+                android:layout_marginStart="4dp"/>
+            <TextView
+                android:id="@+id/unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="S"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/add10s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="+ 10s"/>
+            <Button
+                android:id="@+id/add30s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="+ 30s"
+                />
+            <Button
+                android:id="@+id/add60s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="+ 60s"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/grey"
+        android:text="Choose your exercise"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        />
+
+    <RadioGroup
+        android:id="@+id/exeChoose"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        >
+
+        <RadioButton
+            android:id="@+id/exercise_1"
+            android:layout_width="160dp"
+            android:layout_height="36dp"
+            android:text="Exercise 1"
+            android:textSize="20sp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/exercise_2"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginStart="40dp"
+            android:text="Exercise 2"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/customization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/extra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/h4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/grey"
+                android:text="Customization"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/extra_1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            >
+            <CheckBox
+                android:id="@+id/random"
+                android:layout_width="160dp"
+                android:layout_height="36dp"
+                android:text="Random order"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/indication"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="40dp"
+                android:text="Indication"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"/>
+        <TextView
+            android:id="@+id/numberOfButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="3"
+            android:textColor="@color/orange"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Buttons"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="24sp"
+            android:layout_marginStart="10dp"/>
+        <SeekBar
+            android:id="@+id/barOfButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:min="3"
+            android:max="5"
+            android:progress="3"
+            android:layout_marginTop="14dp"
+            />
+        <Button
+            android:id="@+id/plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="+"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/h5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/grey"
+        android:text="Button size"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+    <LinearLayout
+        android:id="@+id/buttonSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp">
+        <Button
+            android:id="@+id/small"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="S"
+            android:textSize="30sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:background="@color/lowGreen"/>
+        <Button
+            android:id="@+id/mid"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:textSize="50sp"
+            android:text="M"
+            android:textColor="@color/white"
+            android:layout_marginStart="30dp"
+            android:background="@color/grey"/>
+
+        <Button
+            android:id="@+id/large"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="30dp"
+            android:text="L"
+            android:textColor="@color/white"
+            android:textSize="70sp"
+            android:background="@color/grey" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/startGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:textSize="40sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/lowGreen"/>
+
+
+</LinearLayout>
